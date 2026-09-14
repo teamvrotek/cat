@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src ws://127.0.0.1:*; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Cat Companion settings</title>
+  <link rel="stylesheet" href="property-inspector.css">
+  <script type="module" src="property-inspector.js"></script>
+</head>
+<body>
+<main class="inspector" aria-label="Cat Companion settings">
+  <header class="header"><img src="../imgs/actionIcon@2x.png" width="24" height="24" alt=""><span>Cat Companion <span class="version">1.0</span></span><span class="sample-badge" id="sample-badge" hidden>Design preview</span></header>
+  <section class="preview-row" aria-label="Cat preview">
+    <div class="key-frame"><img id="key-preview" width="104" height="104" alt="Your cat's current expression" hidden><span class="preview-loading" id="preview-loading">Waiting for your cat</span></div>
+    <div class="preview-copy"><p class="eyebrow" id="preview-label">Cat Companion</p><h1 id="status-title">Waiting for Stream Deck</h1><p class="preview-description" id="status-description">Select this action on your Stream Deck to meet your cat.</p><p class="counters" id="status-counters"></p></div>
+  </section>
+  <p class="instructions">Tap for attention. Hold 700 ms for a treat.<span>Release when the bar fills to give one treat. Each key has its own cat.</span></p>
+  <p class="message" id="message" role="alert" hidden></p>
+  <section class="settings" aria-label="This cat's settings">
+    <div class="field-group"><label class="field-label" for="cat-name">Name <span>(optional)</span></label><input id="cat-name" type="text" maxlength="40" placeholder="Give your cat a name" autocomplete="off" spellcheck="false" disabled></div>
+    <div class="field-group"><div class="field-heading"><span class="field-label" id="appearance-label">Appearance</span><span id="appearance-name" class="selected-label">Ginger tabby</span></div><div class="coat-picker" id="coat-picker" role="group" aria-labelledby="appearance-label"></div></div>
+    <div class="field-group"><label class="field-label" for="temperament">Temperament</label><select id="temperament" aria-describedby="temperament-hint" disabled></select><p class="hint" id="temperament-hint">Personality is independent of appearance.</p></div>
+    <div class="field-group"><label class="field-label" for="appetite">Appetite</label><select id="appetite" aria-describedby="appetite-hint" disabled></select><p class="hint" id="appetite-hint">Controls how often your cat eats and visits the litter box.</p></div>
+    <fieldset class="schedule"><legend>Sleep schedule</legend><div class="time-fields"><label for="day-start">Day<input id="day-start" type="time" value="08:00" required disabled></label><label for="evening-start">Evening<input id="evening-start" type="time" value="18:00" required disabled></label><label for="night-start">Night<input id="night-start" type="time" value="23:00" required disabled></label></div><p class="hint">Local start times. Sleepy days, attention in the evening, zoomies at night.</p><p class="field-error" id="schedule-error" role="alert" hidden></p></fieldset>
+    <label class="check"><input id="animate-cat" type="checkbox" checked disabled><span>Animate cat</span></label>
+    <p class="care-note">Watch the ears and paws. Relentless tapping brings out the claws, and anger lasts. Quiet time and an undisturbed treat can help.</p>
+    <p class="care-note">Six Churu treats within ten minutes can end in a little mess. Let your cat finish cleaning up.</p>
+    <p class="care-note" id="company-status">Add another cat on this page for company, play and occasional disagreements.</p>
+    <p class="care-note" id="companion-status">Add a Food bowl or Litter box key beside this cat to enable optional care. Needs pause when those keys leave the page.</p>
+    <div class="reset-area"><button type="button" class="button secondary" id="reset-cat" disabled>Reset this cat</button><div class="reset-confirm" id="reset-confirm" hidden><p>Start this cat fresh? Its moods and care history will reset. Appearance, temperament, appetite and schedule stay the same.</p><div class="reset-actions"><button type="button" class="button" id="confirm-reset">Reset cat</button><button type="button" class="button secondary" id="cancel-reset">Keep cat</button></div></div></div>
+  </section>
+  <footer class="footer"><p class="brand-footer">Follow @teamvrotek on <button type="button" class="link" data-link="github" disabled>GitHub</button> or <button type="button" class="link" data-link="instagram" disabled>Instagram</button>.</p></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "cat-companion",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Build Cat Companion 1.0 for Stream Deck.",
+  "license": "MIT",
+  "engines": { "node": ">=20.5.1" },
+  "scripts": { "build": "node build.mjs" },
+  "devDependencies": {
+    "@elgato/cli": "1.9.0",
+    "fflate": "0.8.3"
+  }
+}

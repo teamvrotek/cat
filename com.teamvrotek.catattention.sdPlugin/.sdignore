@@ -1,0 +1,35 @@
+# Development metadata is not needed by the installed plugin.
+package-lock.json
+.DS_Store
+*.log
+logs/
+**/*.test.*
+node_modules/.package-lock.json
+
+# Keep all local and assistant material out of installable builds.
+._*
+.env
+.env.*
+*.tmp
+*.bak
+*~
+.idea/
+.vscode/
+AGENTS.md
+CLAUDE.md
+.codex/
+.claude/
+.cursor/
+.ai/
+ai/
+.local/
+local/
+preview/
+tools/
+tests/
+output/
+tmp/
+marketplace/
+Release/
+*.streamDeckPlugin
+coverage/

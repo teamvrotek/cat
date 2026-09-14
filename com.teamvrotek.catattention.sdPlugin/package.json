@@ -1,0 +1,10 @@
+{
+  "name": "cat-companion",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@elgato/streamdeck": "2.1.0"
+  }
+}

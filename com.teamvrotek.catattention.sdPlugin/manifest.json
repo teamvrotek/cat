@@ -1,0 +1,83 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "UUID": "com.teamvrotek.catattention",
+  "Name": "Cat Companion",
+  "Version": "1.0",
+  "Author": "VROTEK O\u00dc",
+  "Description": "A cat simulator and virtual cat companion for your Stream Deck. A bit like a Tamagotchi, with whiskers, mood swings and very little respect for your work schedule.\n\nPress for attention or hold and release to give a treat. Choose from six coats and four temperaments, name your cat and set its sleep schedule. Add optional Food bowl and Litter box keys to feed it and clean up after it. Get more cats to keep each other company, feel less bored and demand a little less attention from you. They can play together, squabble and get jealous over treats, because sharing your desk does not mean sharing your affection. Everything stays on your device.",
+  "Category": "Cat Companion",
+  "CategoryIcon": "imgs/categoryIcon",
+  "Icon": "imgs/pluginIcon",
+  "CodePath": "plugin.js",
+  "PropertyInspectorPath": "ui/property-inspector.html",
+  "SDKVersion": 3,
+  "Nodejs": {
+    "Version": "20"
+  },
+  "Software": {
+    "MinimumVersion": "6.9"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "13"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "11"
+    }
+  ],
+  "Actions": [
+    {
+      "UUID": "com.teamvrotek.catattention.cat",
+      "Name": "Cat Companion",
+      "Icon": "imgs/actionIcon",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Keypad"
+      ],
+      "Tooltip": "Tap to give attention. Hold for 700 milliseconds, then release to give a treat. Each cat has its own mood, temperament and sleep schedule.",
+      "States": [
+        {
+          "Image": "imgs/actionDefaultImage",
+          "ShowTitle": false
+        }
+      ]
+    },
+    {
+      "UUID": "com.teamvrotek.catattention.food",
+      "Name": "Food bowl",
+      "Icon": "imgs/foodIcon",
+      "PropertyInspectorPath": "ui/resource-inspector.html",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Keypad"
+      ],
+      "Tooltip": "Click to refill. Choose one cat or all cats on this page for little meals and hungry reminders. Fresh food in a nearly empty shared bowl attracts everyone.",
+      "States": [
+        {
+          "Image": "imgs/foodDefaultImage",
+          "ShowTitle": false
+        }
+      ]
+    },
+    {
+      "UUID": "com.teamvrotek.catattention.litter",
+      "Name": "Litter box",
+      "Icon": "imgs/litterIcon",
+      "PropertyInspectorPath": "ui/resource-inspector.html",
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Keypad"
+      ],
+      "Tooltip": "Hold for 3 seconds until the bar is full, then release to clean. A green checkmark confirms completion. Choose one cat or all cats on this page. Cats take turns in a shared box.",
+      "States": [
+        {
+          "Image": "imgs/litterDefaultImage",
+          "ShowTitle": false
+        }
+      ]
+    }
+  ]
+}
